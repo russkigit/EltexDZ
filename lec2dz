@@ -1,0 +1,13 @@
+#!/bin/bash
+cd Documents
+ # Создание 20 текстовых файлов с номерами от 1 до 20
+for i in {1..20};
+do 
+	touch $i.txt
+	echo $i.txt > $i.txt
+
+done 
+# Удаление файлов, не содержащих 4 в имени 
+find . -type f ! -name '*4*' -delete 
+# Запись в файл 14.txt строки "something" 
+echo "something" > 14.txt
